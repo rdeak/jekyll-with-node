@@ -1,15 +1,15 @@
 # jekyll-with-node
 
-Docker image that runs Jekyll with Tailwind 
+Docker image with Jakyll 4.3.2 and Node.js v20 runtime 
 
 ## Create a new site from current directory
 ```bash
-docker run -v $(pwd):/site:Z jekyll new .
+docker run --rm -it -v $(pwd):/site:Z bert84/jekyll build . --new
 ```
 
 ## To serve site locally
 ```bash
-docker run -p 4000:4000 -p 35729:35729 --rm -it -v $(pwd):/site:Z jekyll-serve
+docker run -p 4000:4000 -p 35729:35729 --rm -it -v $(pwd):/site:Z bert84/jekyll-serve
 ```
 
 ## Useful dev commands
